@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-08-24T19:03:48+00:00",
+  "lookback_days": 183,
+  "assumptions": {
+    "mean_trade_shares": "10000 shares per market order \u2014 the one calibration input not measurable from the NGXDash cache (daily deal counts are not stored); order-of-magnitude checked against published NGX deal counts.",
+    "tick_size": "flat 0.01 NGN tick for all symbols (NGX's banded tick rules are not modeled)",
+    "session": "NGX continuous session 10:00-14:20 WAT = 15,600 s"
+  },
+  "symbols": [
+    {
+      "symbol": "GTCO",
+      "last_price_ngn": 127.7,
+      "tick_size_ngn": 0.01,
+      "sigma_annual_rel": 0.37685039760152034,
+      "sigma_day_rel": 0.02373934365546273,
+      "roll_spread_rel": 0.01484679209743154,
+      "roll_autocov": -5.510680889608891e-05,
+      "adv_shares": 23027674.771653544,
+      "trades_per_day_implied": 2302.767477165354,
+      "lambda_per_sec": 0.14761329981829194,
+      "mean_trade_shares": 10000,
+      "session_seconds": 15600,
+      "n_obs_used": 127,
+      "date_range": [
+        "2026-02-23",
+        "2026-08-24"
+      ],
+      "provenance": {
+        "cache_file": "/Users/salisdalhatu/NGXDash/data/prices/GTCO.parquet",
+        "cache_fetched_at": "2026-08-24T17:24:48+00:00",
+        "cache_source": "ngxpulse",
+        "sigma": "ngxdash.analytics.volatility.realized_volatility(close, window=63, periods_per_year=252), last value, de-annualized by 1/sqrt(252)",
+        "spread": "ngxdash.analytics.spreads.roll_spread(close, use_log=True) over the lookback window",
+        "arrival_rate": "mean of cached daily `volume` over lookback / ASSUMED_MEAN_TRADE_SHARES / SESSION_SECONDS (deal counts are NOT in the cache; see assumptions)"
+      }
+    },
+    {
+      "symbol": "OANDO",
+      "last_price_ngn": 35.05,
+      "tick_size_ngn": 0.01,
+      "sigma_annual_rel": 0.5274478261569913,
+      "sigma_day_rel": 0.033226089942214945,
+      "roll_spread_rel": 0.019603678498921313,
+      "roll_autocov": -9.607605267226743e-05,
+      "adv_shares": 7175347.716535433,
+      "trades_per_day_implied": 717.5347716535433,
+      "lambda_per_sec": 0.04599581869573996,
+      "mean_trade_shares": 10000,
+      "session_seconds": 15600,
+      "n_obs_used": 127,
+      "date_range": [
+        "2026-02-23",
+        "2026-08-24"
+      ],
+      "provenance": {
+        "cache_file": "/Users/salisdalhatu/NGXDash/data/prices/OANDO.parquet",
+        "cache_fetched_at": "2026-08-24T16:39:36+00:00",
+        "cache_source": "ngxpulse",
+        "sigma": "ngxdash.analytics.volatility.realized_volatility(close, window=63, periods_per_year=252), last value, de-annualized by 1/sqrt(252)",
+        "spread": "ngxdash.analytics.spreads.roll_spread(close, use_log=True) over the lookback window",
+        "arrival_rate": "mean of cached daily `volume` over lookback / ASSUMED_MEAN_TRADE_SHARES / SESSION_SECONDS (deal counts are NOT in the cache; see assumptions)"
+      }
+    },
+    {
+      "symbol": "LIVESTOCK",
+      "last_price_ngn": 7.95,
+      "tick_size_ngn": 0.01,
+      "sigma_annual_rel": 0.6428901685186763,
+      "sigma_day_rel": 0.04049827395782913,
+      "roll_spread_rel": 0.018900667139793104,
+      "roll_autocov": -8.930880458231372e-05,
+      "adv_shares": 2419903.937007874,
+      "trades_per_day_implied": 241.99039370078737,
+      "lambda_per_sec": 0.015512204724409447,
+      "mean_trade_shares": 10000,
+      "session_seconds": 15600,
+      "n_obs_used": 127,
+      "date_range": [
+        "2026-02-23",
+        "2026-08-24"
+      ],
+      "provenance": {
+        "cache_file": "/Users/salisdalhatu/NGXDash/data/prices/LIVESTOCK.parquet",
+        "cache_fetched_at": "2026-08-24T16:42:47+00:00",
+        "cache_source": "ngxpulse",
+        "sigma": "ngxdash.analytics.volatility.realized_volatility(close, window=63, periods_per_year=252), last value, de-annualized by 1/sqrt(252)",
+        "spread": "ngxdash.analytics.spreads.roll_spread(close, use_log=True) over the lookback window",
+        "arrival_rate": "mean of cached daily `volume` over lookback / ASSUMED_MEAN_TRADE_SHARES / SESSION_SECONDS (deal counts are NOT in the cache; see assumptions)"
+      }
+    }
+  ]
+}

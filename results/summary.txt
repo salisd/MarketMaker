@@ -1,0 +1,46 @@
+paired episodes per symbol: {'GTCO': 50, 'LIVESTOCK': 50, 'OANDO': 50}
+
+=== GTCO ===
+  PnL (NGN/session), n=50 seeds
+    baseline : mean      807,362  median      872,927  sd      375,192  [p5      100,181, p95    1,245,812]
+    A-S      : mean    2,339,184  median    2,326,360  sd      124,261  [p5    2,147,122, p95    2,567,012]
+    A-S diff : mean    1,531,822  median    1,476,623  sd      388,654  [p5    1,054,252, p95    2,073,338]
+    seeds where A-S > baseline: 50/50
+    sessions with negative PnL: baseline 2, A-S 0
+    paired t-test : t=+27.870  p=1.03e-31
+    Wilcoxon      : W=0  p=1.78e-15
+    max |inventory| (lots)   baseline       20.7   A-S       13.6
+    inventory std (lots)     baseline        6.2   A-S        2.6
+    fill events              baseline    1,118.4   A-S    1,770.3
+    filled shares            baseline 6,817,154.8   A-S 10,773,567.4
+    quote-to-trade ratio     baseline        5.6   A-S        3.5
+
+=== OANDO ===
+  PnL (NGN/session), n=50 seeds
+    baseline : mean       97,345  median      101,694  sd       45,548  [p5       28,048, p95      158,296]
+    A-S      : mean      241,497  median      242,048  sd       31,437  [p5      191,642, p95      288,328]
+    A-S diff : mean      144,151  median      143,671  sd       53,572  [p5       68,956, p95      236,396]
+    seeds where A-S > baseline: 50/50
+    sessions with negative PnL: baseline 0, A-S 0
+    paired t-test : t=+19.027  p=2.83e-24
+    Wilcoxon      : W=0  p=1.78e-15
+    max |inventory| (lots)   baseline        8.3   A-S        8.0
+    inventory std (lots)     baseline        2.6   A-S        2.0
+    fill events              baseline      315.0   A-S      495.6
+    filled shares            baseline 1,979,011.4   A-S 3,106,107.8
+    quote-to-trade ratio     baseline       19.9   A-S       12.6
+
+=== LIVESTOCK ===
+  PnL (NGN/session), n=50 seeds
+    baseline : mean        8,954  median        9,705  sd        8,548  [p5       -4,638, p95       21,327]
+    A-S      : mean       23,590  median       24,266  sd        6,110  [p5       14,033, p95       32,536]
+    A-S diff : mean       14,636  median       14,514  sd       10,500  [p5         -217, p95       34,750]
+    seeds where A-S > baseline: 45/50
+    sessions with negative PnL: baseline 7, A-S 0
+    paired t-test : t=+9.856  p=3.25e-13
+    Wilcoxon      : W=25  p=1.61e-12
+    max |inventory| (lots)   baseline        4.7   A-S        5.8
+    inventory std (lots)     baseline        1.5   A-S        1.7
+    fill events              baseline       95.1   A-S      154.3
+    filled shares            baseline  599,942.3   A-S  973,959.9
+    quote-to-trade ratio     baseline       66.2   A-S       40.8
